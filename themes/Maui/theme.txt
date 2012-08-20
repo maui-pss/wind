@@ -1,0 +1,81 @@
+# GRUB2 gfxmenu Maui theme.
+# Copyright (c) 2012 Pier Luigi Fiorini
+
+# For documentation see:
+#   http://www.gnu.org/software/grub/manual/grub.html#Theme-file-format
+
+# Global Property
+title-text: ""
+title-font: "DejaVu Sans Regular 12"
+title-color: "#000000"
+message-font: "DejaVu Sans Mono Regular 12"
+message-color: "#fff"
+message-bg-color: "#f6f6f6"
+desktop-image: "background.png"
+desktop-color: "#000"
+terminal-box: "menu_bkg_*.png"
+terminal-font: "DejaVu Sans Mono Regular 10"
+
+# Show the boot menu
++ boot_menu {
+	left = 30%
+	width = 40%
+	top = 150
+	height = 50%
+	item_font = "DejaVu Sans Regular 12"
+	selected_item_font = "DejaVu Sans Bold 12"
+	item_color = "#5698fc"
+	selected_item_color = "#5698fc"
+	item_height = 38
+	item_padding = 15
+	item_spacing = 5
+	icon_width = 32
+	icon_height = 32
+	item_icon_space = 20
+	selected_item_pixmap_style= "select_bkg_*.png"
+	menu_pixmap_style = "menu_bkg_*.png"
+	scrollbar = true
+	scrollbar_width = 24
+	scrollbar_thumb = "sb_thumb_*.png"
+	scrollbar_frame = "sb_frame_*.png"
+}
+
+
+# Show logo and circular progress
+#+ circular_progress {
+#   id = "__timeout__"
+#   left = 40
+#   top = 150
+#   width = 105
+#   height = 105
+#   num_ticks = 33
+#   ticks_disappear = false
+#   start_angle = -67
+#   end_angle = -67
+#   center_bitmap = "logo.png"
+#   tick_bitmap = "tick.png"
+#}
+
++ progress_bar {
+	id = "__timeout__"
+	left = 25%
+	top = 80%
+	width = 50%
+	height = 8
+	border_color = "#fff"
+	bg_color = "#9e9e9e"
+	fg_color = "#fff"
+	show_text = false
+}
+
+# Show an informational message.
++ hbox {
+	top = 100%-35
+	left = 20%
+	+ label {text = "Enter: " font = "DejaVu Sans 12" color = "#4c4c4c" align = "left"}
+	+ label {text = "Boot Selection     " font = "DejaVu Sans 12" color = "#1692d0" align = "left"}
+	+ label {text = "E: " font = "DejaVu Sans 12" color = "#4c4c4c" align = "left"}
+	+ label {text = "Edit Selection     " font = "DejaVu Sans 12" color = "#1692d0" align = "left"}
+	+ label {text = "C: " font = "DejaVu Sans 12" color = "#4c4c4c" align = "left"}
+	+ label {text = "Command Line" font = "DejaVu Sans 12" color = "#1692d0" align = "left"}
+}
