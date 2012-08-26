@@ -1,4 +1,4 @@
-set(INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/kernel/grub/themes/Maui)
+set(INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/kernel/boot/grub/themes/Maui)
 
 file(GLOB IMAGES "*.png")
 file(GLOB FONTS "*.pf2")
