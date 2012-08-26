@@ -8,9 +8,6 @@ set(GRUBTHEMES_VERSION_MINOR 1)
 set(GRUBTHEMES_VERSION_PATCH 0)
 set(GRUBTHEMES_VERSION_STRING "${GRUBTHEMES_VERSION_MAJOR}.${GRUBTHEMES_VERSION_MINOR}.${GRUBTHEMES_VERSION_PATCH}")
 
-# Installation directories
-include(MauiInstallDirs)
-
 # Make CPack available to easy generate binary packages
 include(CPack)
 
