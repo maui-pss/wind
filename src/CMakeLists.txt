@@ -1,6 +1,9 @@
 include_directories(${Qt5Widgets_INCLUDE_DIRS})
 
-add_definitions(${Qt5Widgets_DEFINITIONS} -fPIC)
+add_definitions(
+    ${Qt5Widgets_DEFINITIONS}
+    ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}
+)
 
 set(SOURCES
     main.cpp
