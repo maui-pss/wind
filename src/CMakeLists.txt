@@ -9,3 +9,5 @@ set(SOURCES
 
 add_executable(WidgetFactory ${SOURCES})
 target_link_libraries(WidgetFactory ${Qt5Widgets_LIBRARIES})
+
+install(TARGETS WidgetFactory DESTINATION ${CMAKE_INSTALL_PROGSDIR})
