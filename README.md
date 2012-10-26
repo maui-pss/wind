@@ -6,7 +6,6 @@ Showcase tool for Qt widgets styles, designed for testing new themes.
 ## Dependencies
 
 In order to build and install Widget Factory you need Qt 5.
-The Vibe repository contains all the instructions to bring it up.
 
 ## Build
 
