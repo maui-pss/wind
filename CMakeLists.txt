@@ -5,9 +5,6 @@ cmake_minimum_required(VERSION 2.8.7)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# Our CMake modules
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
-
 # Installation directories
 include(HawaiiInstallDirs)
 
