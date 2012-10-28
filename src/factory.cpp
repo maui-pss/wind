@@ -44,7 +44,7 @@
 #include "factory.h"
 
 WidgetFactory::WidgetFactory(QWidget *parent)
-    : QDialog(parent)
+    : QWidget(parent)
 {
     originalPalette = QApplication::palette();
 
