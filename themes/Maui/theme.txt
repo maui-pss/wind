@@ -1,5 +1,9 @@
 # GRUB2 gfxmenu Maui theme.
-# Copyright (c) 2012 Pier Luigi Fiorini
+# Designed for 1024x768 resolution.
+# Forked from Archxion and Archlinux by American_Jesus
+# Forked from Axion by Legendary Bibo
+#
+# See: https://github.com/Generator/Grub2-themes
 
 # For documentation see:
 #   http://www.gnu.org/software/grub/manual/grub.html#Theme-file-format
