@@ -5,6 +5,12 @@ cmake_minimum_required(VERSION 2.8.7)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+# Set version
+set(WIDGETFACTORY_VERSION_MAJOR 0)
+set(WIDGETFACTORY_VERSION_MINOR 0)
+set(WIDGETFACTORY_VERSION_PATCH 0)
+set(WIDGETFACTORY_VERSION_STRING "${WIDGETFACTORY_VERSION_MAJOR}.${WIDGETFACTORY_VERSION_MINOR}.${WIDGETFACTORY_VERSION_PATCH}")
+
 # Installation directories
 include(HawaiiInstallDirs)
 
@@ -16,8 +22,15 @@ configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
     IMMEDIATE @ONLY)
-
 add_custom_target(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+
+# Set up packaging
+set(CPACK_PACKAGE_NAME hawaii-widget-factory)
+set(CPACK_PACKAGE_VERSION ${WIDGETFACTORY_VERSION_STRING})
+set(CPACK_SYSTEM_NAME "generic")
+set(CPACK_GENERATOR "TGZ")
+set(CPACK_SET_DESTDIR FALSE)
+include(CPack)
 
 # Build flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fvisibility-inlines-hidden -Wall -std=c++0x")
