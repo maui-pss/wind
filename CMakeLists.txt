@@ -1,8 +1,11 @@
 project(WidgetFactory)
 
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 2.8.9)
 
-set(CMAKE_AUTOMOC ON)
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+# Instruct CMake to run moc automatically when needed
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # Set version
@@ -13,6 +16,9 @@ set(WIDGETFACTORY_VERSION_STRING "${WIDGETFACTORY_VERSION_MAJOR}.${WIDGETFACTORY
 
 # Installation directories
 include(HawaiiInstallDirs)
+
+# Log features
+include(MacroLogFeature)
 
 # Make CPack available to easy generate binary packages
 include(CPack)
@@ -45,11 +51,15 @@ if(CMAKE_BUILD_TYPE MATCHES "^[Rr]elease$")
     add_definitions(-DQT_NO_DEBUG_OUTPUT)
 endif()
 
-# Find Qt5 libraries
+# Find Qt
 find_package(Qt5Widgets REQUIRED)
 if(NOT Qt5Widgets_FOUND)
     message(FATAL_ERROR "Qt5Widgets module is required!")
 endif()
+macro_log_feature(Qt5Widgets_FOUND "Qt5Widgets" "Support for Qt5Widgets" "http://qt-project.org" "")
 
 # Subdirectories
 add_subdirectory(src)
+
+# Display featute log
+macro_display_feature_log()

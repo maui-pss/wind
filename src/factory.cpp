@@ -245,3 +245,5 @@ void WidgetFactory::createProgressBar()
     connect(timer, SIGNAL(timeout()), this, SLOT(advanceProgressBar()));
     timer->start(1000);
 }
+
+#include "moc_factory.cpp"
