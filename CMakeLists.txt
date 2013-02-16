@@ -53,7 +53,11 @@ find_package(Qt5Widgets REQUIRED)
 if(NOT Qt5Widgets_FOUND)
     message(FATAL_ERROR "Qt5Widgets module is required!")
 endif()
+find_package(Qt5Qml)
+find_package(Qt5Quick)
 macro_log_feature(Qt5Widgets_FOUND "Qt5Widgets" "Support for Qt5Widgets" "http://qt-project.org" "")
+macro_log_feature(Qt5Qml_FOUND "Qt5Qml" "Support for Qt5Qml" "http://qt-project.org" "")
+macro_log_feature(Qt5Quick_FOUND "Qt5Quick" "Support for Qt5Quick" "http://qt-project.org" "")
 
 # Subdirectories
 add_subdirectory(src)
