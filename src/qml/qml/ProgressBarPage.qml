@@ -63,26 +63,25 @@ Item {
     }
 
     Column {
-        spacing: 40
-        anchors.centerIn: parent
+        spacing: 20
+        anchors {
+            centerIn: parent
+            margins: 10
+        }
 
         ProgressBar {
             anchors.margins: 20
-            width: 400
             value: progress
         }
 
         ProgressBar {
             anchors.margins: 20
-            width: 400
             value: 1 - progress
         }
 
         ProgressBar {
             anchors.margins: 20
             value: 1
-            width: 400
         }
-
     }
 }
