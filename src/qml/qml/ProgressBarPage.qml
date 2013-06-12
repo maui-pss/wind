@@ -53,12 +53,12 @@ Item {
         NumberAnimation {
             from: 0
             to: 1
-            duration: 3000
+            duration: 6000
         }
         NumberAnimation {
             from: 1
             to: 0
-            duration: 3000
+            duration: 6000
         }
     }
 
@@ -82,6 +82,11 @@ Item {
         ProgressBar {
             anchors.margins: 20
             value: 1
+        }
+
+        ProgressBar {
+            anchors.margins: 20
+            indeterminate: true
         }
     }
 }
