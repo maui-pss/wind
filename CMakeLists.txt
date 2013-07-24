@@ -17,8 +17,8 @@ set(WIDGETFACTORY_VERSION_STRING "${WIDGETFACTORY_VERSION_MAJOR}.${WIDGETFACTORY
 # Installation directories
 include(GNUInstallDirs)
 
-# Log features
-include(MacroLogFeature)
+# Macro to print feature summary
+include(FeatureSummary)
 
 # Add custom uninstall target
 configure_file(
@@ -55,12 +55,9 @@ if(NOT Qt5Widgets_FOUND)
 endif()
 find_package(Qt5Qml)
 find_package(Qt5Quick)
-macro_log_feature(Qt5Widgets_FOUND "Qt5Widgets" "Support for Qt5Widgets" "http://qt-project.org" "")
-macro_log_feature(Qt5Qml_FOUND "Qt5Qml" "Support for Qt5Qml" "http://qt-project.org" "")
-macro_log_feature(Qt5Quick_FOUND "Qt5Quick" "Support for Qt5Quick" "http://qt-project.org" "")
 
 # Subdirectories
 add_subdirectory(src)
 
-# Display featute log
-macro_display_feature_log()
+# Display featute summary
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
