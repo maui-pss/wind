@@ -15,7 +15,7 @@ set(WIDGETFACTORY_VERSION_PATCH 90)
 set(WIDGETFACTORY_VERSION_STRING "${WIDGETFACTORY_VERSION_MAJOR}.${WIDGETFACTORY_VERSION_MINOR}.${WIDGETFACTORY_VERSION_PATCH}")
 
 # Installation directories
-include(HawaiiInstallDirs)
+include(GNUInstallDirs)
 
 # Log features
 include(MacroLogFeature)
