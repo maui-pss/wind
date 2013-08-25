@@ -79,9 +79,14 @@ Item {
 
         Button {
             anchors.margins: 20
+            text: "Disabled"
+            enabled: false
+        }
+
+        Button {
+            anchors.margins: 20
             text: "Dont press me"
             onClicked: if (pageStack) pageStack.pop()
         }
-
     }
 }
