@@ -22,6 +22,9 @@ set(CMAKE_INSTALL_LIBDIR "lib")
 # Installation directories
 include(GNUInstallDirs)
 
+# Paths
+set(PLYMOUTH_THEMESDIR "${CMAKE_INSTALL_FULL_DATADIR}/plymouth/themes")
+
 # Macro to print feature summary
 include(FeatureSummary)
 
@@ -41,6 +44,9 @@ set(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSIO
 set(CPACK_SOURCE_IGNORE_FILES "/build/;/.git;/*.user;/.tx/;~$;${CPACK_SOURCE_IGNORE_FILES}")
 include(CPack)
 add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
+
+# Subdirectories
+add_subdirectory(plymouth)
 
 # Display featute summary
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
