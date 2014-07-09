@@ -47,6 +47,7 @@ add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
 # Subdirectories
 add_subdirectory(plymouth)
+add_subdirectory(syslinux)
 
 # Display featute summary
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
