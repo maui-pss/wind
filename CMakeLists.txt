@@ -10,8 +10,8 @@ set(CMAKE_AUTOMOC ON)
 
 # Set version
 set(THEME_VERSION_MAJOR 0)
-set(THEME_VERSION_MINOR 1)
-set(THEME_VERSION_PATCH 0)
+set(THEME_VERSION_MINOR 2)
+set(THEME_VERSION_PATCH 90)
 set(THEME_VERSION_STRING "${THEME_VERSION_MAJOR}.${THEME_VERSION_MINOR}.${THEME_VERSION_PATCH}")
 
 # GNUInstallDirs cannot detect current architecture because we don't have
