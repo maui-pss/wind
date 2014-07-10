@@ -1,5 +1,10 @@
 set(THEME_DIR ${PLYMOUTH_THEMESDIR}/maui)
 
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/maui.plymouth.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/maui.plymouth"
+    IMMEDIATE @ONLY)
+
 set(FILES
     box.png
     bullet.png
@@ -54,6 +59,8 @@ set(FILES
 )
 
 install(FILES ${FILES} DESTINATION ${THEME_DIR})
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/maui.plymouth"
+        DESTINATION ${THEME_DIR})
 
 install(FILES ${CMAKE_SOURCE_DIR}/common/noise-100-45-5.png
         DESTINATION ${THEME_DIR} RENAME background-tile.png)
