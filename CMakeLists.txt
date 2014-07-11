@@ -46,6 +46,7 @@ include(CPack)
 add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
 # Subdirectories
+add_subdirectory(grub)
 add_subdirectory(plymouth)
 add_subdirectory(syslinux)
 
