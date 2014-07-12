@@ -1,12 +1,16 @@
 project(MauiTheme NONE)
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
+
+# Find ECM
+find_package(ECM 0.0.11 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR}")
 
 # Set version
 set(THEME_VERSION_MAJOR 0)
