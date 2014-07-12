@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/AndroidDelegate.qml</file>
+        <file>qml/ButtonPage.qml</file>
+        <file>qml/CheckBoxPage.qml</file>
+        <file>qml/ProgressBarPage.qml</file>
+        <file>qml/RadioButtonPage.qml</file>
+        <file>qml/SliderPage.qml</file>
+        <file>qml/TabBarPage.qml</file>
+        <file>qml/TextInputPage.qml</file>
+        <file>images/navigation_next_item.png</file>
+        <file>images/navigation_previous_item.png</file>
+    </qresource>
+</RCC>
