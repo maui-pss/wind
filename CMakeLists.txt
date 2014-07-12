@@ -1,16 +1,28 @@
-project(MauiTheme NONE)
+project(MauiTheme)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+
+# Macro to print feature summary
+include(FeatureSummary)
+
+# Options
+option(ENABLE_WIDGETS_FACTORY "Build Widgets Factory" OFF)
+add_feature_info("Widgets Factory" ENABLE_WIDGETS_FACTORY "Build Widgets Factory")
 
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# Instruct CMake to run moc automatically when needed
-set(CMAKE_AUTOMOC ON)
+if(ENABLE_WIDGETS_FACTORY)
+    # Instruct CMake to run moc automatically when needed
+    set(CMAKE_AUTOMOC ON)
+
+    # Minimum Qt version required
+    set(QT_MIN_VERSION "5.3.0")
+endif()
 
 # Find ECM
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR}")
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 # Set version
 set(THEME_VERSION_MAJOR 0)
@@ -18,19 +30,11 @@ set(THEME_VERSION_MINOR 2)
 set(THEME_VERSION_PATCH 90)
 set(THEME_VERSION_STRING "${THEME_VERSION_MAJOR}.${THEME_VERSION_MINOR}.${THEME_VERSION_PATCH}")
 
-# GNUInstallDirs cannot detect current architecture because we don't have
-# a default language defined here, hence it cannot set CMAKE_INSTALL_LIBDIR.
-# To stop it from complain we set a default value here.
-set(CMAKE_INSTALL_LIBDIR "lib")
-
 # Installation directories
-include(GNUInstallDirs)
+include(KDEInstallDirs)
 
 # Paths
 set(PLYMOUTH_THEMESDIR "${CMAKE_INSTALL_FULL_DATADIR}/plymouth/themes")
-
-# Macro to print feature summary
-include(FeatureSummary)
 
 # Add custom uninstall target
 configure_file(
@@ -49,10 +53,24 @@ set(CPACK_SOURCE_IGNORE_FILES "/build/;/.git;/*.user;/.tx/;~$;${CPACK_SOURCE_IGN
 include(CPack)
 add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
+if(ENABLE_WIDGETS_FACTORY)
+    # Find Qt 5
+    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+        Core
+        Gui
+        Widgets
+        Qml
+        Quick
+    )
+endif()
+
 # Subdirectories
 add_subdirectory(grub)
 add_subdirectory(plymouth)
 add_subdirectory(qtquickcontrols)
+if(ENABLE_WIDGETS_FACTORY)
+    add_subdirectory(widgets-factory)
+endif()
 add_subdirectory(syslinux)
 
 # Display featute summary

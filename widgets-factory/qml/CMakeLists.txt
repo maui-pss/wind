@@ -8,4 +8,4 @@ add_executable(qml-widget-factory ${SOURCES} ${RC_FILES})
 qt5_use_modules(qml-widget-factory Widgets Qml Quick)
 
 install(TARGETS qml-widget-factory
-    DESTINATION ${CMAKE_INSTALL_BINDIR})
+        DESTINATION ${BIN_INSTALL_DIR})
