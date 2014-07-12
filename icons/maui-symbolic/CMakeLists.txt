@@ -1,4 +1,4 @@
-set(INSTALL_DIR ${CMAKE_INSTALL_DATADIR}/icons/elegant)
+set(INSTALL_DIR ${ICON_INSTALL_DIR}/maui)
 
 set(TYPES actions apps categories devices emblems mimes emotes mimetypes places status)
 

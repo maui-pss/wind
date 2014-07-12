@@ -1,2 +1,2 @@
-add_subdirectory(elegant)
-add_subdirectory(elegant-symbolic)
+add_subdirectory(maui)
+add_subdirectory(maui-symbolic)
