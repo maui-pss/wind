@@ -23,7 +23,7 @@ set(FILES
 )
 
 install(FILES ${FILES}
-        DESTINATION ${QML_INSTALL_DIR}/QtQuick/Controls/Styes/Maui)
+        DESTINATION ${QML_INSTALL_DIR}/QtQuick/Controls/Styles/Maui)
 
 set(IMAGES
     images/progress-indeterminate.png
