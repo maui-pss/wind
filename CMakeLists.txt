@@ -65,6 +65,7 @@ if(ENABLE_WIDGETS_FACTORY)
 endif()
 
 # Subdirectories
+add_subdirectory(cursor)
 add_subdirectory(grub)
 add_subdirectory(plymouth)
 add_subdirectory(qtquickcontrols)
