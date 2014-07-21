@@ -15,9 +15,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 if(ENABLE_WIDGETS_FACTORY)
     # Instruct CMake to run moc automatically when needed
     set(CMAKE_AUTOMOC ON)
-
-    # Minimum Qt version required
-    set(QT_MIN_VERSION "5.3.0")
 endif()
 
 # Find ECM
@@ -53,6 +50,10 @@ set(CPACK_SOURCE_IGNORE_FILES "/build/;/.git;/*.user;/.tx/;~$;${CPACK_SOURCE_IGN
 include(CPack)
 add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
+# Minimum version requirements
+set(QT_MIN_VERSION "5.3.0")
+set(KF5_MIN_VERSION "5.0.0")
+
 if(ENABLE_WIDGETS_FACTORY)
     # Find Qt 5
     find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
@@ -63,6 +64,9 @@ if(ENABLE_WIDGETS_FACTORY)
         Quick
     )
 endif()
+
+# Find KF5
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 
 # Subdirectories
 add_subdirectory(cursor)
