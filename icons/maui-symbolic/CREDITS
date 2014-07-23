@@ -4,6 +4,7 @@ The following icons are from Breeze:
   - actions/system-log-out-symbolic.svg
   - actions/system-reboot-symbolic.svg
   - actions/system-suspend-symbolic.svg
+  - actions/system-suspend-hibernate-symbolic.svg
   - actions/system-switch-user-symbolic.svg
 
 The other icons are from gnome-icon-themes-symbolic.
