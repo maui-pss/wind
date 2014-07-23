@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   id="svg5048"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="system-lock-screen.svgz">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.396893"
+     inkscape:cx="13.165796"
+     inkscape:cy="17.338794"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1278"
+     inkscape:window-height="599"
+     inkscape:window-x="312"
+     inkscape:window-y="273"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3011"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5053">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <g
+       id="g3772">
+      <rect
+         ry="0"
+         y="1020.3622"
+         x="0"
+         height="32"
+         width="32"
+         id="rect3833"
+         style="fill:#000000;fill-opacity:0;stroke:none" />
+      <rect
+         ry="1.0000174"
+         y="1034.3622"
+         x="7"
+         height="14"
+         width="18"
+         id="rect2989"
+         style="fill:#bebebe;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ssccsssccss"
+         inkscape:connector-curvature="0"
+         id="path2991"
+         d="m 16,1024.3622 c -3.854939,0 -7,3.3697 -7,7.5 l 0,3.5 2.014585,0 -0.02917,-3.5 c -0.02541,-3.0493 2.168466,-5.5 5.014582,-5.5 2.846116,0 5.066944,2.4509 5.024413,5.5 l -0.04882,3.5 2.024403,0 0,-3.5 c 0,-4.1303 -3.145061,-7.5 -6.999993,-7.5 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.23076928;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+    </g>
+  </g>
+</svg>
