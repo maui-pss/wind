@@ -19,8 +19,8 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=59,64,69
-BackgroundNormal=29,34,39
+BackgroundAlternate=224,223,222
+BackgroundNormal=239,240,241
 DecorationFocus=30,146,255
 DecorationHover=61,174,230
 ForegroundActive=246,116,0
@@ -28,7 +28,7 @@ ForegroundInactive=175,176,179
 ForegroundLink=61,174,230
 ForegroundNegative=237,21,21
 ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
+ForegroundNormal=49,54,59
 ForegroundPositive=17,209,22
 ForegroundVisited=61,174,230
 
@@ -47,8 +47,8 @@ ForegroundPositive=17,209,22
 ForegroundVisited=252,252,252
 
 [Colors:Tooltip]
-BackgroundAlternate=59,64,69
-BackgroundNormal=49,54,59
+BackgroundAlternate=196,224,255
+BackgroundNormal=239,240,241
 DecorationFocus=30,146,255
 DecorationHover=61,174,230
 ForegroundActive=246,116,0
@@ -56,13 +56,13 @@ ForegroundInactive=175,176,179
 ForegroundLink=61,174,230
 ForegroundNegative=237,21,21
 ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
+ForegroundNormal=49,54,59
 ForegroundPositive=17,209,22
 ForegroundVisited=61,174,230
 
 [Colors:View]
-BackgroundAlternate=59,64,69
-BackgroundNormal=59,64,69
+BackgroundAlternate=248,247,246
+BackgroundNormal=252,252,252
 DecorationFocus=30,146,255
 DecorationHover=61,174,230
 ForegroundActive=246,116,0
@@ -70,25 +70,11 @@ ForegroundInactive=175,176,179
 ForegroundLink=61,174,230
 ForegroundNegative=237,21,21
 ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
+ForegroundNormal=49,54,59
 ForegroundPositive=17,209,22
 ForegroundVisited=61,174,230
 
 [Colors:Window]
-BackgroundAlternate=59,64,69
-BackgroundNormal=49,54,59
-DecorationFocus=30,146,255
-DecorationHover=61,174,230
-ForegroundActive=246,116,0
-ForegroundInactive=175,176,179
-ForegroundLink=61,174,230
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
-ForegroundPositive=17,209,22
-ForegroundVisited=61,174,230
-
-[Colors:Complementary]
 BackgroundAlternate=218,217,216
 BackgroundNormal=239,240,241
 DecorationFocus=30,146,255
@@ -102,9 +88,24 @@ ForegroundNormal=49,54,59
 ForegroundPositive=17,209,22
 ForegroundVisited=61,174,230
 
+[Colors:Complementary]
+BackgroundAlternate=59,64,69
+BackgroundNormal=49,54,59
+DecorationFocus=30,146,255
+DecorationHover=61,174,230
+ForegroundActive=246,116,0
+ForegroundInactive=175,176,179
+ForegroundLink=61,174,230
+ForegroundNegative=237,21,21
+ForegroundNeutral=201,206,59
+ForegroundNormal=239,240,241
+ForegroundPositive=17,209,22
+ForegroundVisited=61,174,230
+
+
 [General]
-ColorScheme=Plasma Next
-Name=Plasma Next
+ColorScheme=Breeze
+Name=Breeze
 shadeSortColumn=true
 
 [KDE]
