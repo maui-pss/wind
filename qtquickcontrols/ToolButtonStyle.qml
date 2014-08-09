@@ -28,7 +28,7 @@ import QtQuick 2.1
 import QtQuick.Controls 1.0
 import QtQuick.Controls.Styles 1.0
 import QtQuick.Controls.Private 1.0
-import Fluid.Ui 1.0 as FluidUi
+import Hawaii.Components 1.0 as HawaiiComponents
 
 ToolButtonStyle {
     id: toolButtonStyle
@@ -75,7 +75,7 @@ ToolButtonStyle {
                 visible: !hasIcon
             }
 
-            FluidUi.Icon {
+            HawaiiComponents.Icon {
                 id: icon
                 anchors.centerIn: parent
                 iconName: control.__action.iconName ? control.__action.iconName : ""
