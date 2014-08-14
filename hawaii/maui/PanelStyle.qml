@@ -25,9 +25,10 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import Hawaii.Shell.Styles.Base 1.0
+import Hawaii.Shell.Styles.Base 1.0 as Base
+import org.kde.plasma.core 2.0 as PlasmaCore
 
-PanelStyle {
+Base.PanelStyle {
     panelColor: Qt.rgba(0, 0, 0, 0.7)
 
     padding {
@@ -36,6 +37,11 @@ PanelStyle {
     }
 
     panel: Rectangle {
-        color: panelColor
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: Qt.lighter(theme.viewBackgroundColor, 1.2) }
+            GradientStop { position: 0.2; color: Qt.lighter(theme.viewBackgroundColor, 1.2) }
+            GradientStop { position: 1.0; color: Qt.darker(theme.viewBackgroundColor, 1.3) }
+        }
+        opacity: 0.7
     }
 }
