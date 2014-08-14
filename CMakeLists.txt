@@ -71,6 +71,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 # Subdirectories
 add_subdirectory(cursor)
 add_subdirectory(grub)
+add_subdirectory(hawaii)
 add_subdirectory(icons)
 add_subdirectory(plasma)
 add_subdirectory(plymouth)
