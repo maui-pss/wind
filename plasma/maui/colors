@@ -104,8 +104,8 @@ ForegroundVisited=61,174,230
 
 
 [General]
-ColorScheme=Breeze
-Name=Breeze
+ColorScheme=Maui
+Name=Maui
 shadeSortColumn=true
 
 [KDE]
