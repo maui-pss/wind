@@ -4,14 +4,19 @@ set(MODULE_FILES
     OverlayStyle.qml
     PanelStyle.qml
     PopupStyle.qml
-    TextFieldStyle.qml
     TooltipStyle.qml
 )
 install(FILES ${MODULE_FILES}
     DESTINATION ${DATA_INSTALL_DIR}/hawaii/styles/Maui)
 
+set(CONTROLS_FILES
+    TextFieldStyle.qml
+)
+install(FILES ${CONTROLS_FILES}
+    DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui)
+
 set(PRIVATE_FILES
     private/Utils.js
 )
 install(FILES ${PRIVATE_FILES}
-    DESTINATION ${DATA_INSTALL_DIR}/hawaii/styles/Maui/private)
+    DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui/private)
