@@ -11,6 +11,7 @@ install(FILES ${MODULE_FILES}
 
 set(CONTROLS_FILES
     TextFieldStyle.qml
+    ToolButtonStyle.qml
 )
 install(FILES ${CONTROLS_FILES}
     DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui)
