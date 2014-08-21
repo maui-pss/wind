@@ -26,10 +26,18 @@
 
 import QtQuick 2.0
 import QtQuick.Controls.Styles 1.1 as QtControlsStyle
+import Hawaii.Components 1.0 as Components
 import org.kde.plasma.core 2.0 as PlasmaCore
 import "private/Utils.js" as Utils
 
 QtControlsStyle.TextFieldStyle {
+    property QtObject clearButton: QtObject {
+        property string iconName: "edit-clear-rtl-symbolic"
+        property url iconSource: ""
+        property color color: theme.viewTextColor
+        property real iconSize: units.iconSizes.small
+    }
+
     id: style
     font: theme.defaultFont
     textColor: theme.viewTextColor
