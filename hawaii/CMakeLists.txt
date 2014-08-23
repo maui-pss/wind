@@ -13,6 +13,7 @@ set(CONTROLS_FILES
     TextFieldStyle.qml
     ToolButtonStyle.qml
     ScrollViewStyle.qml
+    SidePanelStyle.qml
 )
 install(FILES ${CONTROLS_FILES}
     DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui)
