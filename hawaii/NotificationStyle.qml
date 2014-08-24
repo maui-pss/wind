@@ -33,6 +33,9 @@ import "private/Utils.js" as Utils
 
 Styles.NotificationStyle {
     background: Item {
+        implicitWidth: units.gridUnit * 24
+        implicitHeight: units.gridUnit * 5
+
         Components.NoiseBackground {
             id: noise
             anchors.fill: parent
