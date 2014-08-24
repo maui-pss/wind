@@ -33,6 +33,12 @@ import "private/Utils.js" as Utils
 
 QtControlsStyle.ScrollViewStyle {
     id: style
+
+    PlasmaCore.Svg {
+        id: arrowsSvg
+        imagePath: "widgets/arrows"
+    }
+
     scrollBarBackground: Item {
         property bool sticky: false
         property bool hovered: styleData.hovered
@@ -104,9 +110,7 @@ QtControlsStyle.ScrollViewStyle {
             PlasmaCore.SvgItem {
                 anchors.centerIn: parent
                 anchors.margins: 1
-                svg: PlasmaCore.Svg {
-                    imagePath: "widgets/arrows"
-                }
+                svg: arrowsSvg
                 elementId: styleData.horizontal ? "right-arrow" : "down-arrow"
                 width: units.gridUnit * 0.7
                 height: width
@@ -132,9 +136,7 @@ QtControlsStyle.ScrollViewStyle {
                 anchors.margins: 1
                 anchors.verticalCenterOffset: styleData.horizontal ? 0 : -1
                 anchors.horizontalCenterOffset: styleData.horizontal ? -1 : 0
-                svg: PlasmaCore.Svg {
-                    imagePath: "widgets/arrows"
-                }
+                svg: arrowsSvg
                 elementId: styleData.horizontal ? "left-arrow" : "up-arrow"
                 width: units.gridUnit * 0.7
                 height: width
