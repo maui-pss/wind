@@ -25,14 +25,35 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
 import Hawaii.Components 1.0 as Components
 import Hawaii.Shell.Controls.Styles 1.0 as Styles
+import org.kde.plasma.core 2.0 as PlasmaCore
 import "private/Utils.js" as Utils
 
 Styles.NotificationStyle {
-    background: Components.NoiseBackground {
-        color: Utils.rgba(PlasmaCore.ColorScope.backgroundColor, 0.95)
-        radius: 6
-        border.color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+    background: Item {
+        Components.NoiseBackground {
+            id: noise
+            anchors.fill: parent
+            color: PlasmaCore.ColorScope.backgroundColor
+            visible: false
+        }
+
+        Rectangle {
+            id: border
+            anchors.fill: parent
+            border.color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            radius: units.gridUnit
+            antialiasing: true
+            visible: false
+        }
+
+        OpacityMask {
+            anchors.fill: parent
+            source: noise
+            maskSource: border
+            opacity: 0.85
+        }
     }
 }
