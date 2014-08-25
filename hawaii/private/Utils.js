@@ -24,6 +24,10 @@
  * $END_LICENSE$
  ***************************************************************************/
 
+function blendColors(color1, color2, a) {
+    return Qt.tint(color1, adjustAlpha(color2, p));
+}
+
 function rgba(color, a) {
     return Qt.rgba(color.r, color.g, color.b, a);
 }
