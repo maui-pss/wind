@@ -64,7 +64,7 @@ QtControlsStyle.ButtonStyle {
                 return "";
             }
             color: control.hovered || !control.flat ? theme.buttonTextColor : theme.textColor
-            width: units.iconSizes.medium
+            width: control.iconSize > 0 ? control.iconSize : units.iconSizes.medium
             height: width
             visible: valid
         }
