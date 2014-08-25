@@ -2,6 +2,7 @@ set(MODULE_FILES
     ButtonStyle.qml
     CalendarStyle.qml
     DialogStyle.qml
+    GroupBoxStyle.qml
     NotificationStyle.qml
     OverlayStyle.qml
     PanelStyle.qml
