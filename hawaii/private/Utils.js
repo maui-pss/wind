@@ -25,7 +25,7 @@
  ***************************************************************************/
 
 function blendColors(color1, color2, a) {
-    return Qt.tint(color1, adjustAlpha(color2, p));
+    return Qt.tint(color1, rgba(color2, a));
 }
 
 function rgba(color, a) {
