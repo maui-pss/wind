@@ -25,10 +25,10 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import Hawaii.Shell.Styles.Base 1.0 as Base
+import Hawaii.Shell.Controls.Styles 1.0 as Styles
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Base.PanelStyle {
+Styles.PanelStyle {
     panel: Rectangle {
         gradient: Gradient {
             GradientStop { position: 0.0; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
