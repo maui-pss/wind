@@ -35,8 +35,10 @@ QtControlsPrivate.GroupBoxStyle {
     id: groupBoxStyle
 
     padding {
-        top: (control.title.length > 0 || control.checkable ? units.smallSpacing : 0) + units.largeSpacing
         left: units.smallSpacing
+        top: (control.title.length > 0 || control.checkable ? QtControlsPrivate.TextSingleton.implicitHeight : 0) + (units.smallSpacing * 0.5)
+        right: units.smallSpacing
+        bottom: units.smallSpacing * 0.9
     }
 
     panel: Item {
@@ -56,6 +58,16 @@ QtControlsPrivate.GroupBoxStyle {
             anchors.margins: units.smallSpacing
             text: control.title
             font.bold: true
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            anchors.topMargin: padding.top - 7
+            border.color: Utils.blendColors(PlasmaCore.ColorScope.backgroundColor, PlasmaCore.ColorScope.textColor, 0.2)
+            border.width: 1
+            color: Utils.blendColors(PlasmaCore.ColorScope.backgroundColor, theme.viewBackgroundColor, 0.5)
+            radius: units.gridUnit * 0.5
+            visible: !control.flat
         }
     }
 }
