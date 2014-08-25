@@ -1,4 +1,5 @@
 set(MODULE_FILES
+    ButtonStyle.qml
     DialogStyle.qml
     NotificationStyle.qml
     OverlayStyle.qml
