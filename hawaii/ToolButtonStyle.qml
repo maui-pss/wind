@@ -111,10 +111,10 @@ QtControlsStyle.ButtonStyle {
             Layout.alignment: Qt.AlignVCenter
         }
 
-        Layout.preferredHeight: Math.max(units.iconSizes.small, label.implicitHeight)
+        Layout.preferredHeight: Math.max(units.gridUnit, Math.max(icon.visible ? icon.height : 0, label.visible ? label.implicitHeight : 0))
     }
     background: Item {
-        implicitWidth: control.text.length == 0 ? height : Math.max(style.mSize.width * 12, style.minimumWidth)
+        implicitWidth: (!label.visible || control.text.length == 0) ? height : Math.max(style.mSize.width * 12, style.minimumWidth)
         implicitHeight: Math.floor(Math.max(style.mSize.height * 1.6, style.minimumHeight))
 
         PlasmaExtras.ConditionalLoader {
