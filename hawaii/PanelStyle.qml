@@ -29,18 +29,11 @@ import Hawaii.Shell.Styles.Base 1.0 as Base
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Base.PanelStyle {
-    panelColor: Qt.rgba(0, 0, 0, 0.7)
-
-    padding {
-        left: 2
-        top: 2
-    }
-
     panel: Rectangle {
         gradient: Gradient {
-            GradientStop { position: 0.0; color: Qt.lighter(theme.viewBackgroundColor, 1.2) }
-            GradientStop { position: 0.2; color: Qt.lighter(theme.viewBackgroundColor, 1.2) }
-            GradientStop { position: 1.0; color: Qt.darker(theme.viewBackgroundColor, 1.3) }
+            GradientStop { position: 0.0; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
+            GradientStop { position: 0.2; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
+            GradientStop { position: 1.0; color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.3) }
         }
         opacity: 0.7
     }
