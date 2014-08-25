@@ -35,14 +35,20 @@ QtControlsPrivate.GroupBoxStyle {
     id: groupBoxStyle
 
     padding {
-        left: units.smallSpacing
-        top: (control.title.length > 0 || control.checkable ? QtControlsPrivate.TextSingleton.implicitHeight : 0) + (units.smallSpacing * 0.5)
-        right: units.smallSpacing
-        bottom: units.smallSpacing * 0.9
+        left: units.smallSpacing * 2
+        top: (units.smallSpacing * 2.5) + theme.mSize(label.font).height
+        right: units.smallSpacing * 2
+        bottom: units.smallSpacing * 2
+    }
+
+    property Component label: PlasmaComponents.Label {
+        text: control.title
+        font.weight: Font.Bold
     }
 
     panel: Item {
         anchors.fill: parent
+
         Loader {
             id: checkboxloader
             anchors.left: parent.left
@@ -51,23 +57,22 @@ QtControlsPrivate.GroupBoxStyle {
             width: item ? item.implicitWidth : 0
         }
 
-        PlasmaComponents.Label {
-            id: label
-            anchors.top: parent.top
-            anchors.left: checkboxloader.right
-            anchors.margins: units.smallSpacing
-            text: control.title
-            font.bold: true
-        }
-
         Rectangle {
             anchors.fill: parent
-            anchors.topMargin: padding.top - 7
+            anchors.topMargin: theme.mSize(label.font).height
             border.color: Utils.blendColors(PlasmaCore.ColorScope.backgroundColor, PlasmaCore.ColorScope.textColor, 0.2)
             border.width: 1
             color: Utils.blendColors(PlasmaCore.ColorScope.backgroundColor, theme.viewBackgroundColor, 0.5)
             radius: units.gridUnit * 0.5
             visible: !control.flat
+        }
+
+        Loader {
+            id: labelLoader
+            anchors.top: parent.top
+            anchors.left: checkboxloader.right
+            anchors.topMargin: -units.smallSpacing * 1.2
+            sourceComponent: label
         }
     }
 }
