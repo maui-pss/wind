@@ -40,10 +40,10 @@ QtControlsStyle.ButtonStyle {
     property bool pressed: control.pressed || control.checked
 
     padding {
-        left: control.width / 8
-        top: control.width / 8
-        right: control.width / 8
-        bottom: control.width / 8
+        left: units.smallSpacing
+        top: units.smallSpacing
+        right: units.smallSpacing
+        bottom: units.smallSpacing
     }
 
     id: style
@@ -54,7 +54,8 @@ QtControlsStyle.ButtonStyle {
             readonly property bool valid: status === Image.Ready || status === Image.Loading
 
             id: icon
-            anchors.verticalCenter: parent.verticalCenter
+            //anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenter: label.text.length > 0 ? undefined : parent.horizontalCenter
             iconName: control.__action.iconName ? control.__action.iconName : control.iconName
             iconSource: {
                 if (control.__action && !control.__action.iconName)
@@ -67,6 +68,8 @@ QtControlsStyle.ButtonStyle {
             width: control.iconSize > 0 ? control.iconSize : units.iconSizes.medium
             height: width
             visible: valid
+
+            Layout.alignment: Qt.AlignCenter
         }
 
         PlasmaComponents.Label {
@@ -76,12 +79,14 @@ QtControlsStyle.ButtonStyle {
             visible: control.text != ""
             height: parent.height
             color: control.hovered || !control.flat ? theme.buttonTextColor : theme.textColor
-            horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
+            //horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
+            //horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             elide: Text.ElideRight
 
-            Layout.fillWidth: true
+            //Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
+            Layout.alignment: Qt.AlignCenter
         }
 
         PlasmaExtras.ConditionalLoader {
