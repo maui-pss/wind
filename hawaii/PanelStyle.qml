@@ -35,6 +35,6 @@ Styles.PanelStyle {
             GradientStop { position: 0.2; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
             GradientStop { position: 1.0; color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.3) }
         }
-        opacity: 0.7
+        opacity: 0.9
     }
 }
