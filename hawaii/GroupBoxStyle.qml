@@ -54,7 +54,6 @@ QtControlsStyle.GroupBoxStyle {
             anchors.left: checkboxloader.right
             anchors.margins: units.smallSpacing
             text: control.title
-            color: textColor
             font.bold: true
         }
     }
