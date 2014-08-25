@@ -76,7 +76,7 @@ QtControlsStyle.ButtonStyle {
             id: label
             text: control.text
             font: theme.defaultFont
-            visible: control.text != ""
+            visible: control.text != "" && !icon.visible
             height: parent.height
             color: control.hovered || !control.flat ? theme.buttonTextColor : theme.textColor
             //horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
