@@ -33,6 +33,8 @@ import "private/Utils.js" as Utils
 Styles.SidePanelStyle {
     id: style
     background: Components.NoiseBackground {
+        property color borderColor: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+
         color: Utils.rgba(PlasmaCore.ColorScope.backgroundColor, 0.95)
 
         Rectangle {
@@ -40,7 +42,7 @@ Styles.SidePanelStyle {
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             width: 1
-            color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            color: borderColor
             antialiasing: true
             visible: style.control.location == PlasmaCore.Types.LeftEdge
         }
@@ -50,7 +52,7 @@ Styles.SidePanelStyle {
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             height: 1
-            color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            color: borderColor
             antialiasing: true
             visible: style.control.location == PlasmaCore.Types.TopEdge
         }
@@ -60,7 +62,7 @@ Styles.SidePanelStyle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: 1
-            color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            color: borderColor
             antialiasing: true
             visible: style.control.location == PlasmaCore.Types.RightEdge
         }
@@ -70,7 +72,7 @@ Styles.SidePanelStyle {
             anchors.top: parent.top
             anchors.right: parent.right
             height: 1
-            color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            color: borderColor
             antialiasing: true
             visible: style.control.location == PlasmaCore.Types.BottomEdge
         }
