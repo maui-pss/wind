@@ -32,10 +32,16 @@ import "private/Utils.js" as Utils
 
 Styles.SidePanelStyle {
     id: style
-    background: Components.NoiseBackground {
+    background: Rectangle {
         property color borderColor: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
 
         color: Utils.rgba(PlasmaCore.ColorScope.backgroundColor, 0.95)
+
+        Image {
+            anchors.fill: parent
+            source: "images/noise-texture.png"
+            fillMode: Image.Tile
+        }
 
         Rectangle {
             anchors.top: parent.top
