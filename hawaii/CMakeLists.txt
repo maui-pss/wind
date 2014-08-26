@@ -21,7 +21,7 @@ set(IMAGE_FILES
     images/noise-texture.png
     images/progress-indeterminate.png
 )
-install(FILES ${PRIVATE_FILES}
+install(FILES ${IMAGE_FILES}
     DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui/images)
 
 set(PRIVATE_FILES
