@@ -15,17 +15,17 @@ set(MODULE_FILES
     TooltipStyle.qml
 )
 install(FILES ${MODULE_FILES}
-    DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui)
+    DESTINATION ${QML_INSTALL_DIR}/PSS/Shell/Controls/Styles/Maui)
 
 set(IMAGE_FILES
     images/noise-texture.png
     images/progress-indeterminate.png
 )
 install(FILES ${IMAGE_FILES}
-    DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui/images)
+    DESTINATION ${QML_INSTALL_DIR}/PSS/Shell/Controls/Styles/Maui/images)
 
 set(PRIVATE_FILES
     private/Utils.js
 )
 install(FILES ${PRIVATE_FILES}
-    DESTINATION ${QML_INSTALL_DIR}/Hawaii/Shell/Controls/Styles/Maui/private)
+    DESTINATION ${QML_INSTALL_DIR}/PSS/Shell/Controls/Styles/Maui/private)

@@ -1,7 +1,7 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
- * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+ * Copyright (C) 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
  * Author(s):
  *    Pier Luigi Fiorini
@@ -24,17 +24,10 @@
  * $END_LICENSE$
  ***************************************************************************/
 
-import QtQuick 2.0
-import Hawaii.Shell.Controls.Styles 1.0 as Styles
-import org.kde.plasma.core 2.0 as PlasmaCore
+function blendColors(color1, color2, a) {
+    return Qt.tint(color1, rgba(color2, a));
+}
 
-Styles.PanelStyle {
-    panel: Rectangle {
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
-            GradientStop { position: 0.2; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
-            GradientStop { position: 1.0; color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.3) }
-        }
-        opacity: 0.9
-    }
+function rgba(color, a) {
+    return Qt.rgba(color.r, color.g, color.b, a);
 }

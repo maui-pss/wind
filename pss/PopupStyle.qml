@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
  * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -27,8 +27,8 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Fluid.Ui 1.0
-import Hawaii.Shell.Styles 1.0
-import Hawaii.Shell.Styles.Base 1.0
+import PSS.Shell.Styles 1.0
+import PSS.Shell.Styles.Base 1.0
 
 PopupStyle {
     property int shadowSize: 8

@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
  * Copyright (C) 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -27,7 +27,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.1 as QtControlsStyle
-import Hawaii.Components 1.0 as Components
+import PSS.Components 1.0 as Components
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -54,7 +54,8 @@ QtControlsStyle.ButtonStyle {
             readonly property bool valid: status === Image.Ready || status === Image.Loading
 
             id: icon
-            anchors.verticalCenter: parent.verticalCenter
+            //anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenter: label.text.length > 0 ? undefined : parent.horizontalCenter
             iconName: control.__action.iconName ? control.__action.iconName : control.iconName
             iconSource: {
                 if (control.__action && !control.__action.iconName)
@@ -67,21 +68,25 @@ QtControlsStyle.ButtonStyle {
             width: control.iconSize > 0 ? control.iconSize : units.iconSizes.medium
             height: width
             visible: valid
+
+            Layout.alignment: Qt.AlignCenter
         }
 
         PlasmaComponents.Label {
             id: label
             text: control.text
             font: theme.defaultFont
-            visible: control.text != ""
+            visible: control.text != "" && !icon.visible
             height: parent.height
             color: control.hovered || !control.flat ? theme.buttonTextColor : theme.textColor
-            horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
+            //horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
+            //horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             elide: Text.ElideRight
 
-            Layout.fillWidth: true
+            //Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
+            Layout.alignment: Qt.AlignCenter
         }
 
         PlasmaExtras.ConditionalLoader {
@@ -106,10 +111,10 @@ QtControlsStyle.ButtonStyle {
             Layout.alignment: Qt.AlignVCenter
         }
 
-        Layout.preferredHeight: Math.max(units.iconSizes.small, label.implicitHeight)
+        Layout.preferredHeight: Math.max(units.gridUnit, Math.max(icon.visible ? icon.height : 0, label.visible ? label.implicitHeight : 0))
     }
     background: Item {
-        implicitWidth: control.text.length == 0 ? height : Math.max(style.mSize.width * 12, style.minimumWidth)
+        implicitWidth: (!label.visible || control.text.length == 0) ? height : Math.max(style.mSize.width * 12, style.minimumWidth)
         implicitHeight: Math.floor(Math.max(style.mSize.height * 1.6, style.minimumHeight))
 
         PlasmaExtras.ConditionalLoader {

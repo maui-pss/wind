@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
  * Copyright (C) 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -25,8 +25,8 @@
  ***************************************************************************/
 
 import QtQuick 2.1
-import Hawaii.Shell.Controls.Styles 1.0 as Styles
-import Hawaii.Components 1.0 as Components
+import PSS.Shell.Controls.Styles 1.0 as Styles
+import PSS.Components 1.0 as Components
 import org.kde.plasma.core 2.0 as PlasmaCore
 import "private/Utils.js" as Utils
 

@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Widget Styles.
+ * This file is part of PSS Widget Styles.
  *
  * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -28,7 +28,7 @@ import QtQuick 2.1
 import QtQuick.Controls 1.0
 import QtQuick.Controls.Styles 1.0
 import QtQuick.Controls.Private 1.0
-import Hawaii.Components 1.0 as HawaiiComponents
+import PSS.Components 1.0 as PSSComponents
 
 ToolButtonStyle {
     id: toolButtonStyle
@@ -75,7 +75,7 @@ ToolButtonStyle {
                 visible: !hasIcon
             }
 
-            HawaiiComponents.Icon {
+            PSSComponents.Icon {
                 id: icon
                 anchors.centerIn: parent
                 iconName: control.__action.iconName ? control.__action.iconName : ""

@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
  * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -25,38 +25,16 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import QtGraphicalEffects 1.0
-import Hawaii.Components 1.0 as Components
-import Hawaii.Shell.Controls.Styles 1.0 as Styles
+import PSS.Shell.Controls.Styles 1.0 as Styles
 import org.kde.plasma.core 2.0 as PlasmaCore
-import "private/Utils.js" as Utils
 
-Styles.NotificationStyle {
-    background: Item {
-        implicitWidth: units.gridUnit * 24
-        implicitHeight: units.gridUnit * 5
-
-        Components.NoiseBackground {
-            id: noise
-            anchors.fill: parent
-            color: PlasmaCore.ColorScope.backgroundColor
-            visible: false
+Styles.PanelStyle {
+    panel: Rectangle {
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
+            GradientStop { position: 0.2; color: Qt.lighter(PlasmaCore.ColorScope.backgroundColor, 1.2) }
+            GradientStop { position: 1.0; color: Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.3) }
         }
-
-        Rectangle {
-            id: border
-            anchors.fill: parent
-            border.color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
-            radius: units.gridUnit
-            antialiasing: true
-            visible: false
-        }
-
-        OpacityMask {
-            anchors.fill: parent
-            source: noise
-            maskSource: border
-            opacity: 0.85
-        }
+        opacity: 0.9
     }
 }

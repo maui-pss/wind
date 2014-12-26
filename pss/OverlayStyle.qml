@@ -1,7 +1,7 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
- * Copyright (C) 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+ * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
  * Author(s):
  *    Pier Luigi Fiorini
@@ -24,10 +24,25 @@
  * $END_LICENSE$
  ***************************************************************************/
 
-function blendColors(color1, color2, a) {
-    return Qt.tint(color1, rgba(color2, a));
-}
+import QtQuick 2.0
+import PSS.Shell.Styles.Base 1.0
 
-function rgba(color, a) {
-    return Qt.rgba(color.r, color.g, color.b, a);
+OverlayStyle {
+    panelColor1: Qt.rgba(0.13, 0.13, 0.13, 0.7)
+    panelColor2: Qt.rgba(0, 0, 0, 0.7)
+    textColor: "white"
+    textShadowColor: Qt.rgba(0, 0, 0, 0.7)
+
+    panel: Rectangle {
+        id: background
+        anchors.fill: parent
+        border.color: Qt.rgba(0, 0, 0, 0.5)
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: panelColor1 }
+            GradientStop { position: 0.5; color: panelColor2 }
+            GradientStop { position: 1.0; color: panelColor2 }
+        }
+        radius: 6
+        antialiasing: true
+    }
 }

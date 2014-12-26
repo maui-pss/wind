@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Widget Styles.
+ * This file is part of PSS Widget Styles.
  *
  * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *

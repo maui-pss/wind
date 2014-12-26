@@ -1,5 +1,5 @@
 /****************************************************************************
- * This file is part of Hawaii Shell.
+ * This file is part of PSS Shell.
  *
  * Copyright (C) 2013-2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
  *
@@ -25,24 +25,38 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import Hawaii.Shell.Styles.Base 1.0
+import QtGraphicalEffects 1.0
+import PSS.Components 1.0 as Components
+import PSS.Shell.Controls.Styles 1.0 as Styles
+import org.kde.plasma.core 2.0 as PlasmaCore
+import "private/Utils.js" as Utils
 
-OverlayStyle {
-    panelColor1: Qt.rgba(0.13, 0.13, 0.13, 0.7)
-    panelColor2: Qt.rgba(0, 0, 0, 0.7)
-    textColor: "white"
-    textShadowColor: Qt.rgba(0, 0, 0, 0.7)
+Styles.NotificationStyle {
+    background: Item {
+        implicitWidth: units.gridUnit * 24
+        implicitHeight: units.gridUnit * 5
 
-    panel: Rectangle {
-        id: background
-        anchors.fill: parent
-        border.color: Qt.rgba(0, 0, 0, 0.5)
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: panelColor1 }
-            GradientStop { position: 0.5; color: panelColor2 }
-            GradientStop { position: 1.0; color: panelColor2 }
+        Components.NoiseBackground {
+            id: noise
+            anchors.fill: parent
+            color: PlasmaCore.ColorScope.backgroundColor
+            visible: false
         }
-        radius: 6
-        antialiasing: true
+
+        Rectangle {
+            id: border
+            anchors.fill: parent
+            border.color: Utils.rgba(Qt.darker(PlasmaCore.ColorScope.backgroundColor, 1.35), 0.5)
+            radius: units.gridUnit
+            antialiasing: true
+            visible: false
+        }
+
+        OpacityMask {
+            anchors.fill: parent
+            source: noise
+            maskSource: border
+            opacity: 0.85
+        }
     }
 }
